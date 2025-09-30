@@ -8,7 +8,7 @@ import io
 # ---------------------------
 # Load YOLO model once
 # ---------------------------
-model = YOLO(r"C:\\Users\\Moham\\project1\\best.pt")
+model = YOLO(r"best.pt")
 
 # ---------------------------
 # Streamlit page setup
