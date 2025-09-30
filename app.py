@@ -4,11 +4,10 @@ import cv2
 from PIL import Image
 import tempfile
 import io
+from ultralytics import YOLO
 
-# ---------------------------
-# Load YOLO model once
-# ---------------------------
-model = YOLO(r"best.pt")
+model = YOLO("best.pt")
+model.model = torch.load("best.pt", map_location="cpu", weights_only=False)
 
 # ---------------------------
 # Streamlit page setup
